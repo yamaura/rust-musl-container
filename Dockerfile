@@ -1,4 +1,4 @@
-FROM rust:1.72.1-alpine
+FROM rust:1.74.0-alpine
 
 WORKDIR /usr/src
 RUN mkdir -p /.cargo
