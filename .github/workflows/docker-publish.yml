@@ -67,7 +67,7 @@ jobs:
       
       # Build and push step for other branches with TAG build-arg
       - name: Build and push (other branches)
-        if: !github.event.is_default_branch
+        if: github.ref_name != 'main'
         uses: docker/build-push-action@v6
         with:
           push: ${{ github.event_name != 'pull_request' }}
